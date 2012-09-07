@@ -1,0 +1,48 @@
+
+/* BOUTIQUE */
+.info {
+    position: relative;
+}
+
+.info span {
+    display:none;
+}
+
+.info:hover span{
+    display:inline;
+    position:absolute;
+    top:20px;
+    left:20px;
+    white-space: nowrap;
+    border: 1px #7C7C7C solid;
+    background-color: #ECECEC;
+    padding:5px;
+    z-index:100;
+}
+
+#list {
+
+    width:770px;
+    margin-bottom:20px;
+    display:inline-block;
+}
+
+#achat {
+    border : 1px #7C7C7C solid;
+    width:770px;
+    display:inline-block;
+}
+
+.blockvente {
+    margin-right:-25px;
+    display:inline-block;
+    float:left;
+}
+
+.blockachat {
+    display:inline-block;
+}
+
+#gestionboutique td {
+    padding-right:20px;
+}
