@@ -7,11 +7,16 @@ Un onglet Minecraft-Xtra se créer dans la wp-admin-bar,en affichant le nombre de
 
 A savoir : la base de donnée se met a jour toute seul, et se supprime automatiquement à la désactivation du plugin.
 
+REQUIS :
+
+* Le plugin JSONAPI installé sur votre serveur Minecraft (http://dev.bukkit.org/server-mods/jsonapi/)
+* Si votre serveur est distant, ouvrez les ports requis.
+
 Installation
 ------------
 
-1. Uploader le dossier `Minecraft-Xtra` dans le dossier `/wp-content/plugins/` 
-2. Activer le plugin à travers l'onglet 'Plugins' dans le menu de WordPress
+1. Uploader le dossier `Minecraft-Xtra` dans le dossier `/wp-content/plugins/` OU activer le plugin à travers l'onglet 'Plugins' dans le menu de WordPress
+2. Configurer JSONAPI et Minecraft-Xtra (dans le menu Minecraft-Xtra)
 
 
 Frequently Asked Questions 

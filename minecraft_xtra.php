@@ -12,7 +12,7 @@ class minecraft_xtra {
     
 protected $tb_config,$tb_prachat,$tb_blocks,$tb_users,$tb_allopass;
 protected $dir,$url;
-protected $dons,$code,$iddcode,$idpcode,$monnaie,$portjson,$mdpjson,$saltjson,$userjson,$pseudo,$token;
+protected $dons,$code,$iddcode,$idpcode,$monnaie,$serveurjson,$portjson,$mdpjson,$saltjson,$userjson,$pseudo,$token;
 
     function __construct() { 
     	global $wpdb;
@@ -65,7 +65,8 @@ protected $dons,$code,$iddcode,$idpcode,$monnaie,$portjson,$mdpjson,$saltjson,$u
 (6, \'userjson\', \'\'),
 (7, \'mdpjson\', \'\'),
 (8, \'portjson\', \'\'),
-(9, \'saltjson\', \'\');';
+(9, \'saltjson\', \'\'),
+(10,\'serveurjson\',\'\');';
 
 
 	$crea_prachat = 'CREATE TABLE IF NOT EXISTS `'.$this->tb_prachat.'` (
@@ -208,6 +209,10 @@ protected $dons,$code,$iddcode,$idpcode,$monnaie,$portjson,$mdpjson,$saltjson,$u
 		<table class="form-table">
 			<tbody>
 				<h3>Jsonapi</h3>
+                                <tr>
+					<th><label for="serveurjson">IP serveur Jsonapi :</label></th>
+					<td><input type="text" value="<?php echo $this->serveurjson ?>" name="serveurjson"></td>
+				</tr>
 				<tr>
 					<th><label for="userjson">Userjson :</label></th>
 					<td><input type="text" value="<?php echo $this->userjson ?>" name="userjson"></td>
@@ -354,7 +359,7 @@ protected $dons,$code,$iddcode,$idpcode,$monnaie,$portjson,$mdpjson,$saltjson,$u
         
 global $wpdb;      
 include_once('JSONAPI.php');
-$api = new JSONAPI('localhost', ''.$this->portjson.'', ''.$this->userjson.'', ''.$this->mdpjson.'', ''.$this->saltjson.'');
+$api = new JSONAPI(''.$this->serveurjson.'', ''.$this->portjson.'', ''.$this->userjson.'', ''.$this->mdpjson.'', ''.$this->saltjson.'');
 wp_register_style('style.css',''.$this->url.'/style.css','','1.1');
 wp_enqueue_style('style.css');
 
